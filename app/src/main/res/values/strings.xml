@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Urna Mítica</string>
+    <string name="progresso">%1$d de %2$d eleitores votaram</string>
+    <string name="title">Eleições síndico 2018</string>
+    <string name="input_eleitores_hint">Quantos eleitores vão votar?</string>
+    <string name="iniciar_votacao">Iniciar votação</string>
+    <string name="lisa">Lisa</string>
+    <string name="jisoo">Jisoo</string>
+    <string name="branco">BRANCO</string>
+    <string name="corrige">CORRIGE</string>
+    <string name="confirma">CONFIRMA</string>
+    <string name="resultado_individual">%1$s: %2$d votos (%3$s dos votos válidos)</string>
+    <string name="empate">Sem vencedor - deve acontecer uma nova eleição!</string>
+    <string name="numero_invalido">Número de eleitores inválido!</string>
+    <string name="input_vazio">Digite o número de eleitores!</string>
+    <string name="novo_sindico">Novo síndico: %1$s</string>
+</resources>

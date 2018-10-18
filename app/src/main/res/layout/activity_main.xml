@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:id="@+id/title"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="#0000FF"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputQuantidade"
+        android:hint="@string/input_eleitores_hint"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:inputType="number"
+        android:visibility="visible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnIniciar"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/inputQuantidade"
+        android:onClick="iniciarVotacao"
+        android:text="@string/iniciar_votacao"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lisa"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:src="@mipmap/lisa"
+        android:visibility="invisible"
+        android:onClick="escolher"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lisa"
+        android:id="@+id/nomeLisa"
+        android:text="@string/lisa"
+        android:textSize="20dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lisa"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/nomeJisoo"
+        android:text="@string/jisoo"
+        android:textSize="20dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/jisoo"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@mipmap/jisoo"
+        android:onClick="escolher"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBranco"
+        app:layout_constraintTop_toBottomOf="@id/nomeLisa"
+        android:text="@string/branco"
+        android:onClick="escolher"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textBranco"
+        app:layout_constraintTop_toBottomOf="@id/nomeLisa"
+        android:visibility="invisible"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progress="0"
+        android:progressTint="#FF0000"
+        android:id="@+id/progressoVotacao"
+        app:layout_constraintBottom_toTopOf="@id/textoProgresso"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textoProgresso"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nomeLisa"
+        android:id="@+id/btnCorrige"
+        android:onClick="votar"
+        android:background="#FFFF00"
+        android:text="@string/corrige"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnCorrige"
+        android:id="@+id/btnConfirma"
+        android:onClick="votar"
+        android:background="#00FF00"
+        android:text="@string/confirma"
+        android:visibility="invisible"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progress="50"
+        android:progressTint="#FF0000"
+        android:id="@+id/resultadoLisa"
+        app:layout_constraintTop_toBottomOf="@id/nomeLisa"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textoResultadoLisa"
+        app:layout_constraintTop_toBottomOf="@id/resultadoLisa"
+        android:visibility="invisible"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progress="50"
+        android:progressTint="#0000FF"
+        android:id="@+id/resultadoJisoo"
+        app:layout_constraintTop_toBottomOf="@id/textoResultadoLisa"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textoResultadoJisoo"
+        app:layout_constraintTop_toBottomOf="@id/resultadoJisoo"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textoResultadoFinal"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/textoResultadoJisoo"/>
+
+</android.support.constraint.ConstraintLayout>
